@@ -1,0 +1,40 @@
+<div class="container">
+	<!-- Content here -->
+	<div class="container"></div>
+	<div class="row">
+		<nav class="col-sm-2">
+			<div class="thumbnail">
+				<a href="assets/img/{{detailBook?.imgName}}"> <img
+					src="assets/img/{{detailBook?.imgName}}" style="width: 100%">
+				</a>
+			</div>
+		</nav>
+		<section class="col-sm-10">
+			<h5 class="mb-1">{{detailBook?.title}}</h5>
+			<small>de {{detailBook?.author?.lastName}}</small>
+			<div class="row">
+				<article class="col-sm-10">
+					<blockquote>
+						<p class="mb-1">{{detailBook?.resume}}</p>
+					</blockquote>
+				</article>
+				<div class="col-sm-2">
+					<form>
+						<div class="row">
+							<aside class="col-sm-16">
+								<label for="quantite"><small>Quantité : </small> <select
+									id="quantite">
+										<option *ngFor="let quantite of quantites">{{quantite}}</option>
+								</select> </label>
+							</aside>
+							<aside class="col-sm-16">
+								<button type="button" class="btn btn-primary">Ajouter
+									au panier</button>
+							</aside>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>

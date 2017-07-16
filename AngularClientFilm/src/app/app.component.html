@@ -1,0 +1,11 @@
+<!--The whole content below can be removed with the new code.-->
+<div class="list-group" >
+  <a href="" [routerLink]="['/detailBook',book.id]" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let book of books">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{book.title}}</h5>
+      <small>3 days ago</small>
+    </div>
+    <small>{{book.author.lastName}}</small>
+    <p class="mb-1">{{book.price}} € </p>
+  </a>
+</div>
