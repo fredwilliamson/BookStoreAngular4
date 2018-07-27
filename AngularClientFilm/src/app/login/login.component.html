@@ -1,0 +1,11 @@
+<form class="form-inline my-2 my-lg-0" (ngSubmit)="submitLoginForm()" [formGroup]="loginForm">
+  <label>
+    Firstname:
+    <input type="text" [formControl]="FirstName">
+  </label>
+  <label>
+    Name:
+    <input type="text" [formControl]="LastName">
+  </label>
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Validate</button>
+</form>

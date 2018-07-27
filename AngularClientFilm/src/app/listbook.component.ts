@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {BookService} from './services/book.service';
 import { Book } from './beans/book';
-import { Observable } from 'rxjs';
+import { Observable} from 'rxjs';
+import { map, take } from 'rxjs/operators';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -16,7 +17,7 @@ export class ListbookComponent implements OnInit {
   constructor(private bookService : BookService) { }
 
   ngOnInit() {
-       this.bookService.getAllBooks().subscribe((books : Array<Book>)=> {this.books=books});
+   this.bookService.getAllBooks().subscribe((books : Array<Book>)=> {this.books=books});
    console.log(this.books);
   }
 
